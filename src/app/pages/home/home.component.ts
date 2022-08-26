@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 
 import { Todo } from 'src/models';
+import { randomTopic } from 'src/utils/randomTopic';
 import { HttpService } from '../../http.service';
 
 @Component({
@@ -10,7 +11,6 @@ import { HttpService } from '../../http.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  list = Array.from(Array(10));
   todos: Todo[] = [];
   constructor(private httpService: HttpService) {}
 
@@ -19,9 +19,10 @@ export class HomeComponent implements OnInit {
       .getTodos()
       .pipe(
         map((res) => {
-          return res
-            .map((item) => ({ ...item, title: '12 ' + item.title }))
-            .slice(0, 10);
+          return res.slice(0, 12);
+        }),
+        map((res) => {
+          return res.map((item) => ({ ...item, topic: randomTopic() }));
         })
       )
       .subscribe((res) => {

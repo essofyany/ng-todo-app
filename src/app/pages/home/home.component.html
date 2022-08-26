@@ -1,5 +1,8 @@
 <div class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
   <ng-container *ngFor="let item of todos">
-    <app-todo-card [title]="item.title"></app-todo-card>
+    <app-todo-card
+      [topic]="item?.topic || 'Default'"
+      [title]="item.title"
+    ></app-todo-card>
   </ng-container>
 </div>
