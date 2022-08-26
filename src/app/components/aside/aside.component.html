@@ -1,1 +1,18 @@
-<p>aside works!</p>
+<div class="w-full flex flex-col gap-6">
+  <h2 class="font-semibold text-slate-400">Topics</h2>
+  <ul class="w-full flex flex-col gap-4">
+    <li *ngFor="let topic of topics">
+      <p
+        (click)="setActiveTopic(topic)"
+        class="text-sm font-medium capitalize cursor-pointer hover:text-black p-2 rounded-lg"
+        [ngClass]="{
+          'text-black bg-white shadow-lg shadow-slate-400/20':
+            topic === activeTopic,
+          'text-slate-400/60': topic !== activeTopic
+        }"
+      >
+        {{ topic }}
+      </p>
+    </li>
+  </ul>
+</div>
