@@ -1,1 +1,6 @@
-<p>home works!</p>
+<div class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+  <app-todo-card title="delectus aut autem"></app-todo-card>
+  <ng-container *ngFor="let item of list">
+    <app-todo-card></app-todo-card>
+  </ng-container>
+</div>

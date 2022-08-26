@@ -9,6 +9,7 @@ import { EditTodoComponent } from './pages/edit-todo/edit-todo.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AsideComponent } from './components/aside/aside.component';
+import { TodoCardComponent } from './components/todo-card/todo-card.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AsideComponent } from './components/aside/aside.component';
     EditTodoComponent,
     PageNotFoundComponent,
     HeaderComponent,
-    AsideComponent
+    AsideComponent,
+    TodoCardComponent
   ],
   imports: [
     BrowserModule,
