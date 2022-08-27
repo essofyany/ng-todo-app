@@ -11,10 +11,14 @@ import { HttpService } from '../../http.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  isLoading: boolean = false;
   todos: Todo[] = [];
+  list = Array.from(Array(10));
+
   constructor(private httpService: HttpService) {}
 
   ngOnInit(): void {
+    this.isLoading = true;
     this.httpService
       .getTodos()
       .pipe(
@@ -25,8 +29,10 @@ export class HomeComponent implements OnInit {
           return res.map((item) => ({ ...item, topic: randomTopic() }));
         })
       )
-      .subscribe((res) => {
-        this.todos = res;
+      .subscribe({
+        next: (res) => {
+          this.todos = res;
+        },
       });
   }
 }
