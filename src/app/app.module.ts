@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { AsideComponent } from './components/aside/aside.component';
 import { TodoCardComponent } from './components/todo-card/todo-card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SkeletonCardComponent } from './components/skeleton-card/skeleton-card.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     PageNotFoundComponent,
     HeaderComponent,
     AsideComponent,
-    TodoCardComponent
+    TodoCardComponent,
+    SkeletonCardComponent
   ],
   imports: [
     BrowserModule,
