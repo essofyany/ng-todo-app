@@ -1,1 +1,109 @@
-<p>single-todo works!</p>
+<div class="w-full">
+  <!-- heeader -->
+  <div class="w-full flex justify-between items-center">
+    <a class="font-semibold text-black">Task Details</a>
+    <ul class="flex gap-4">
+      <li class="">
+        <button
+          class="text-xs hover:border-slate-300 hover:text-slate-500 text-slate-400 border px-4 py-1.5 flex gap-1 rounded"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-pencil-square"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
+            />
+            <path
+              fill-rule="evenodd"
+              d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"
+            />
+          </svg>
+          Edit Task
+        </button>
+      </li>
+      <li class="">
+        <button
+          class="text-xs hover:border-slate-300 hover:text-slate-500 text-slate-400 border px-2 py-1.5 rounded"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-three-dots pt-0.5"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+            />
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <!-- title -->
+  <h1 class="text-3xl font-bold my-8">Einstar LMS - Courses Animation</h1>
+  <!-- subtile metadata -->
+  <div class="w-full flex justify-between items-center">
+    <a class="capitalize bg-black text-white px-4 py-1 text-sm">Design</a>
+    <ul class="flex gap-4 text-slate-400">
+      <li class="flex items-center gap-1.5">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-clock text-slate-500"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"
+          />
+          <path
+            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"
+          />
+        </svg>
+        <span class="text-xs">1h20min</span>
+      </li>
+      <li class="flex items-center gap-1.5">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-calendar text-slate-500"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"
+          />
+        </svg>
+        <span class="text-xs">Aug 17, 2022</span>
+      </li>
+    </ul>
+  </div>
+  <hr class="my-6" />
+  <div class="">
+    <a class="font-semibold text-black">Task Description</a>
+    <div
+      class="mt-4 flex flex-col gap-2 text-black/75 leading-relaxed tracking-wide text-sm"
+    >
+      <p class="">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+        ducimus optio quos sapiente voluptas soluta debitis dolorum, fugiat esse
+        similique
+      </p>
+      <p class="">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+        ducimus optio quos sapiente voluptas soluta debitis dolorum, fugiat esse
+        similique...
+      </p>
+      <a class="text-primary text-sm cursor-pointer">Read More</a>
+    </div>
+  </div>
+</div>

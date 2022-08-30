@@ -1,7 +1,7 @@
 <header class="w-full py-4 grid grid-cols-12 items-center">
   <!-- logo -->
   <div class="col-span-3">
-    <h1 class="font-bold text-2xl">TooDo's</h1>
+    <h1 routerLink="/" class="font-bold text-2xl cursor-pointer">TooDo's</h1>
     <div class="w-1/6 h-1 bg-primary rounded-full"></div>
   </div>
   <div class="col-span-6">
@@ -10,7 +10,8 @@
         <a
           class="font-medium text-sm cursor-pointer px-5 py-0.5 pb-1 rounded-full"
           [ngClass]="{
-            'text-black bg-white shadow-lg shadow-slate-400/20': status == 'ALL',
+            'text-black bg-white shadow-lg shadow-slate-400/20':
+              status == 'ALL',
             'text-slate-400 hover:text-black': status !== 'ALL'
           }"
           >All (52)</a
@@ -20,7 +21,8 @@
         <a
           class="font-medium text-sm cursor-pointer px-5 py-0.5 pb-1 rounded-full"
           [ngClass]="{
-            'text-black bg-white shadow-lg shadow-slate-400/20': status == 'DONE',
+            'text-black bg-white shadow-lg shadow-slate-400/20':
+              status == 'DONE',
             'text-slate-400 hover:text-black': status !== 'DONE'
           }"
           >Done (22)</a
@@ -30,7 +32,8 @@
         <a
           class="font-medium text-sm cursor-pointer px-5 py-0.5 pb-1 rounded-full"
           [ngClass]="{
-            'text-black bg-white shadow-lg shadow-slate-500/20': status == 'ARCHIVED',
+            'text-black bg-white shadow-lg shadow-slate-500/20':
+              status == 'ARCHIVED',
             'text-slate-400 hover:text-black': status !== 'ARCHIVED'
           }"
           >Archived (11)</a

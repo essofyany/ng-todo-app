@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { HttpService } from '../../http.service';
 
 @Component({
   selector: 'app-todo-card',
@@ -9,8 +10,13 @@ export class TodoCardComponent implements OnInit {
   @Input() title: string =
     'delectus aut autem delectus aut autemdelectus aut autem';
   @Input() topic: string = 'design';
+  @Input() id?: number;
 
-  constructor() {}
+  constructor(private httpService: HttpService) {}
 
   ngOnInit(): void {}
+
+  loadTodo() {
+    this.httpService.isTodoLoaded(true);
+  }
 }

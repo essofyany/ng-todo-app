@@ -1,15 +1,42 @@
-<div class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-  <ng-container *ngIf="isLoading">
-    <ng-container *ngFor="let item of list">
-      <app-skeleton-card></app-skeleton-card>
-    </ng-container>
-  </ng-container>
-  <ng-container *ngIf="!isLoading">
-    <ng-container *ngFor="let item of todos">
-      <app-todo-card
-        [topic]="item?.topic || 'Default'"
-        [title]="item.title"
-      ></app-todo-card>
-    </ng-container>
-  </ng-container>
+<div class="container pt-5 grid grid-cols-12 gap-4">
+  <!-- home page -->
+  <div class="col-span-8">
+    <!-- header -->
+    <app-header></app-header>
+    <!-- page content -->
+    <div class="w-full grid grid-cols-12 gap-4 mt-10">
+      <!-- aside -->
+      <div class="col-span-3 lg:col-span-2 pr-8">
+        <app-aside></app-aside>
+      </div>
+      <!-- main -->
+      <main class="col-span-9 lg:col-span-10">
+        <div
+          class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+        >
+          <ng-container *ngIf="isLoading">
+            <ng-container *ngFor="let item of list">
+              <app-skeleton-card></app-skeleton-card>
+            </ng-container>
+          </ng-container>
+          <ng-container *ngIf="!isLoading">
+            <ng-container *ngFor="let item of todos">
+              <app-todo-card
+                [topic]="item?.topic || 'Default'"
+                [title]="item.title"
+                [id]="item?.id"
+              ></app-todo-card>
+            </ng-container>
+          </ng-container>
+        </div>
+      </main>
+    </div>
+  </div>
+  <!-- nested page : page for single todo -->
+  <div class="bg-white rounded-lg p-4 overflow-hidden col-span-4">
+    <!-- <button (click)="toggleNestedPage()">load page</button> -->
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>

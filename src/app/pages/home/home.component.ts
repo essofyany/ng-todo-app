@@ -11,6 +11,7 @@ import { HttpService } from '../../http.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  nestedPage = false;
   isLoading: boolean = false;
   todos: Todo[] = [];
   list = Array.from(Array(10));
@@ -18,12 +19,13 @@ export class HomeComponent implements OnInit {
   constructor(private httpService: HttpService) {}
 
   ngOnInit(): void {
+    this.nestedPage = this.httpService.todoLoaded
     this.isLoading = true;
     this.httpService
       .getTodos()
       .pipe(
         map((res) => {
-          return res.slice(0, 12);
+          return res.slice(0, 10);
         }),
         map((res) => {
           return res.map((item) => ({ ...item, topic: randomTopic() }));
@@ -35,5 +37,9 @@ export class HomeComponent implements OnInit {
         },
       });
     this.isLoading = false;
+  }
+
+  toggleNestedPage() {
+    this.nestedPage = !this.nestedPage;
   }
 }
